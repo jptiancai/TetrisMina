@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="application" class="org.springframework.richclient.application.Application">
+		<constructor-arg index="0" ref="applicationDescriptor" />
+		<constructor-arg index="1" ref="lifecycleAdvisor" />
+	</bean>
+
+	<bean id="applicationDescriptor"
+		class="org.springframework.richclient.application.support.DefaultApplicationDescriptor">
+		<property name="version" value="0.1.0" />
+		<property name="buildId" value="20090822" />
+	</bean>
+
+	<bean id="lifecycleAdvisor" class="tetrismina.client.LifeCycleAdvisor">
+		<property name="windowCommandBarDefinitions" value="ctx/richclient-commands-ctx.xml" />
+		<property name="windowCommandManagerBeanName" value="windowCommandManager" />
+		<property name="startingPageId" value="gameLobbyView" />
+		<property name="menubarBeanName" value="menuBar" />
+		<property name="tetrisClient" ref="tetrisClient" />
+	</bean>
+
+	<bean id="gameLobbyView"
+		class="org.springframework.richclient.application.support.DefaultViewDescriptor">
+		<property name="viewClass" value="tetrismina.client.ui.GameLobbyView" />
+		<property name="viewProperties">
+			<map>
+				<entry key="tetrisClient"><ref bean="tetrisClient"/></entry>
+				<entry key="clientHandler"><ref bean="clientHandler"/></entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="serviceLocator"
+		class="org.springframework.richclient.application.ApplicationServicesLocator">
+		<property name="applicationServices" ref="applicationServices" />
+	</bean>
+
+	<bean id="applicationServices"
+		class="org.springframework.richclient.application.support.DefaultApplicationServices" />
+
+	<bean id="applicationEventMulticaster"
+		class="org.springframework.context.event.SimpleApplicationEventMulticaster" />
+
+	<bean id="applicationObjectConfigurer" depends-on="serviceLocator"
+		class="org.springframework.richclient.application.config.DefaultApplicationObjectConfigurer">
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>tetrismina.client.ui.messages
+				</value>
+				<value>org.springframework.richclient.application.messages
+				</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
