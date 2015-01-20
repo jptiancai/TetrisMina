@@ -3,6 +3,8 @@ TetrisMina
 
 TetrisMina分析
 
+> MINA官方文档介绍非常详细,从`历史介绍`-->`框架鸟瞰`-->`核心概念`等关键部分都做了中重点标注和解释.堪称教科书式的文档说明.
+
 **预备知识**
 
 - [mina official documentation](https://mina.apache.org/mina-project/documentation.html#documentation)
@@ -27,6 +29,24 @@ I/O Peocessor,创建服务和协议--->I/O Filter,字节转换成数据结构或
 - PlayingGames.java
 	开始游戏,找寻对手,结束游戏,用到StringUtils的isEmpty()函数
 
+**State Machine**
+
+![Tetris Statemachine.png](pic/Tetris Statemachine.png)
+
+
+> 根据客户端的指令做出相应的状态调整.
+
+状态名称| 描述
+-------- | ---
+Root| 其他5中状态的父状态;统一管理和处理异常;登出后的状态
+NotConnected| session打开后状态
+Idle| 用户登录后状态;游戏胜利;游戏结束
+InvitationSent| 邀请其他对手游戏后的状态
+InvitationAccepted| 接收其他对手游戏后的状态
+Playing| 邀请和接收后的状态;同步其他对手的操作;
+
+
+
 **bug**
 
 - [ ]  登录时,名字输入时可空,造成邀请对方时有问题
@@ -35,7 +55,7 @@ I/O Peocessor,创建服务和协议--->I/O Filter,字节转换成数据结构或
 
 **设计模式**
 
-![command.png](command.png)
+![command.png](pic/command.png)
 
 - 抽象工厂模式,TetrisCommandFactory工厂通过反射`isAssignableFrom()函数`来创建AbstractTetrisCommand的11个子类.
 
