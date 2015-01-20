@@ -52,6 +52,9 @@ Playing| 邀请和接收后的状态;同步其他对手的操作;
 - [ ]  登录时,名字输入时可空,造成邀请对方时有问题
 - [ ] 邀请是,点击否之后,再次邀请没有提示框了.
 - [ ] 关闭时报错.
+- [ ] 没有针对LoginCommand等指令的有效性做判断.参考[learn-mina-the-hard-way](https://github.com/jptiancai/learn-mina-the-hard-way)中`StateMachine`一节
+- [ ] 增加空格控制键快速下落底部
+- [ ] 单元测试
 
 **设计模式**
 
