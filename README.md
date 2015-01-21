@@ -17,8 +17,8 @@ I/O Peocessor,创建服务和协议--->I/O Filter,字节转换成数据结构或
 
 <div id="toc">
 **目录**
-[server端](#server)
-[State Machine](#State Machine)
+- [server端](#server)
+- [State Machine](#State-Machine)
 
 
 
@@ -40,7 +40,7 @@ I/O Peocessor,创建服务和协议--->I/O Filter,字节转换成数据结构或
 - PlayingGames.java
 	开始游戏,找寻对手,结束游戏,用到StringUtils的isEmpty()函数
 
-<div id="State Machine">
+<div id="State-Machine">
 **State Machine**  [↑](#toc)
 
 ![Tetris Statemachine.png](pic/Tetris Statemachine.png)
