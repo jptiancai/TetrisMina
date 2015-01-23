@@ -7,6 +7,7 @@ TetrisMina分析
 
 **预备知识**
 
+- [使用 Apache MINA 2 开发网络应用](https://www.ibm.com/developerworks/cn/java/j-lo-mina2/)
 - [mina official documentation](https://mina.apache.org/mina-project/documentation.html#documentation)
 - [Spring Richclient ~ A Journey](http://chrismdp.com/2006/04/spring-richclient/):看完这个系列之后,最好看一下它的实现[spring-rich-client](https://github.com/shevek/spring-rich-client)
 
