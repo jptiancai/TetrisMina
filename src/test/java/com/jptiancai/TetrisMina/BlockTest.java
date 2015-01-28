@@ -22,11 +22,11 @@ public class BlockTest {
 	@After
 	public void tearDown() {
 	}
-
+	
 	@Test
 	public void testTransform() {
-		Block block=Block.T;
-//		Block block=Block.L;
+//		Block block=Block.T;
+		Block block=Block.L;
 //		Block block=Block.I;
 //		Block block=Block.TIAN;
 //		Block block=Block.AL;
