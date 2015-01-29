@@ -1,6 +1,17 @@
 TetrisMina
 ==========
 
+运行截图
+
+- 登录游戏
+
+![login](pic/login.png)
+
+
+- 游戏过程
+
+![playing](pic/playing.png)
+
 TetrisMina分析
 
 > MINA官方文档介绍非常详细,从`历史介绍`-->`框架鸟瞰`-->`核心概念`等关键部分都做了中重点标注和解释.堪称教科书式的文档说明.
