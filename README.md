@@ -32,7 +32,7 @@ I/O Peocessor,创建服务和协议--->I/O Filter,字节转换成数据结构或
 **目录**
 - [server端](#server)
 - [State Machine](#State-Machine)
-
+- [bug](#bug)
 
 
 
@@ -71,8 +71,8 @@ InvitationAccepted| 接收其他对手游戏后的状态
 Playing| 邀请和接收后的状态;同步其他对手的操作;
 
 
-
-**bug**
+<div id="bug">
+**bug**  [↑](#toc)
 
 - [ ]  登录时,名字输入时可空,造成邀请对方时有问题
 - [ ] 邀请是,点击否之后,再次邀请没有提示框了.
