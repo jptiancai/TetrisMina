@@ -80,6 +80,7 @@ Playing| 邀请和接收后的状态;同步其他对手的操作;
 - [ ] 没有针对LoginCommand等指令的有效性做判断.参考[learn-mina-the-hard-way](https://github.com/jptiancai/learn-mina-the-hard-way)中`StateMachine`一节
 - [ ] 增加空格控制键快速下落底部
 - [ ] 单元测试
+- [ ] 游戏结束的一刹那,方块叠加在了一起.
 
 **设计模式**
 
