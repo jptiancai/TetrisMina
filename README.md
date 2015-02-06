@@ -30,15 +30,19 @@ I/O Peocessor,创建服务和协议--->I/O Filter,字节转换成数据结构或
 
 <div id="toc">
 **目录**
-- [server端](#server)
-- [State Machine](#State-Machine)
+- [服务端](#server)
+- [状态机](#State-Machine)
 - [bug](#bug)
-
+- [设计模式](#pattern)
+- [客户端](#client)
+- [工具类](#utils)
+- [游戏内实现](#game)
+- [其他](#other)
 
 
 
 <div id="server">
-**server端**  [↑](#toc)
+**服务端**  [↑](#toc)
 
 - ServerMain.java
 	服务端入口类,调用TetrisServer的Start()函数
@@ -54,7 +58,7 @@ I/O Peocessor,创建服务和协议--->I/O Filter,字节转换成数据结构或
 	开始游戏,找寻对手,结束游戏,用到StringUtils的isEmpty()函数
 
 <div id="State-Machine">
-**State Machine**  [↑](#toc)
+**状态机**  [↑](#toc)
 
 ![Tetris Statemachine.png](pic/Tetris Statemachine.png)
 
@@ -82,24 +86,29 @@ Playing| 邀请和接收后的状态;同步其他对手的操作;
 - [ ] 单元测试
 - [ ] 游戏结束的一刹那,方块叠加在了一起.
 
-**设计模式**
+<div id="pattern">
+**设计模式**  [↑](#toc)
 
 ![command.png](pic/command.png)
 
 - 抽象工厂模式,TetrisCommandFactory工厂通过反射`isAssignableFrom()函数`来创建AbstractTetrisCommand的11个子类.
 
-**客户端**
+<div id="client">
+**客户端**  [↑](#toc)
 
 - (难点,需要熟悉richclient编程)利用richclient的ApplicationLauncher函数通过配置来实例化窗口(菜单栏,按钮及文字等等).
 - 进入游戏逻辑:刷新游戏列表-->接收邀请-->开始游戏-->同步广播-->赢得游戏
 
-**domain**
+<div id="utils">
+**工具类**  [↑](#toc)
 
 - PlayerDataSource:用HashSet存储每个Player对象,并且防止了重复.
 
-**游戏内实现**
+<div id="game">
+**游戏内实现**  [↑](#toc)
 
-**其他**
+<div id="other">
+**其他**  [↑](#toc)
 
 - `command.png`由[ObjectAid UML Explorer for Eclipse工具制作](http://www.objectaid.com/home)
 - `Tetris Statemachine.png`由[Astah Professional工具制作](http://astah.net/editions/professional)
