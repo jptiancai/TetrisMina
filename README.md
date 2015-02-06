@@ -112,7 +112,7 @@ Playing| 邀请和接收后的状态;同步其他对手的操作;
 
 - `command.png`由[ObjectAid UML Explorer for Eclipse工具制作](http://www.objectaid.com/home)
 - `Tetris Statemachine.png`由[Astah Professional工具制作](http://astah.net/editions/professional)
-
+- [QQTetris AI (java source code included)](http://code.google.com/p/xytetrisbot/):即时图形分析技术
 
 
 
